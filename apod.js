@@ -1,5 +1,16 @@
 var apiKeyFetcher = require("./apiKeyFetcher");
 
-var key = apiKeyFetcher.getApiKey();
+var APIKEY = apiKeyFetcher.getApiKey();
 
-console.log(key);
+var getCurrentApod = function() {
+	var baseUrl = "https://api.data.gov/nasa/planetary/apod";
+	var url = baseUrl + "?api_key=" + APIKEY;
+
+	console.log(url);
+};
+
+var getApodForDate = function(dateString) {
+
+};
+
+getCurrentApod();
